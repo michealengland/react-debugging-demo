@@ -5,8 +5,21 @@ import InfiniteCounter from './examples/example-2'
 import AnimalKingdom from './examples/example-3';
 import Giraffes from './examples/example-4';
 import Elephant from './examples/example-5';
+import Tiger from './examples/example-6';
 
 function App() {
+
+  const tigerTraits = {
+    age: 6,
+    color: 'orange',
+    stripeColor: 'black',
+    type: 'feline',
+    weight: 'heavy',
+  }
+
+  console.log(
+    {tigerTraits}
+  );
 	// const [giraffeCount, setGiraffeCount] = useState(null);
 
   // useEffect(() => {
@@ -38,7 +51,8 @@ function App() {
       {/* <InfiniteCounter /> */}
       {/* <AnimalKingdom /> */}
       {/* <Giraffes numberOfGiraffes={giraffeCount} /> */}
-      <Elephant />
+      {/* <Elephant /> */}
+      <Tiger tigerTraits={tigerTraits} />
     </div>
   );
 }
