@@ -1,8 +1,7 @@
 
 /**
- * Triggering a React TypeError by referencing a value that doens't exist.
- *
- * @param {Object} textObj Object containing text properties.
+ * Try:
+ * Fix the missing value and render a sentence.
  */
 export default function Paragraph({textObj}) {
     const {word1, word2, word3} = textObj
