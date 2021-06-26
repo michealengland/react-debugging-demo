@@ -12,13 +12,10 @@ export default function Elephant() {
 	}
 
 	return (
-		<div className='example-outer'>
-			<Instructions example={5}/>
 			<div className='example-inner'>
 				<h2>Change the elephant's name</h2>
 				<input name="name" placeholder={"type here"} onChange={onChange} id="elephant-name" type="text" />
 				<p>Current Name: {elephantName}</p>
 			</div>
-		</div>
 	)
 }

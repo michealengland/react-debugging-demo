@@ -6,9 +6,6 @@ import Instructions from '../components/Instructions';
 export default function Paragraph({textObj}) {
     const {word1, word2, word3} = textObj
     return (
-        <div className='example-outer'>
-            <Instructions example={1} />
             <h3 className='example-inner'>{`${word1} ${word2} ${word3.value}`}</h3>
-        </div>
     );
 }

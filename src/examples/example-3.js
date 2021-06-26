@@ -10,8 +10,6 @@ export default function AnimalKingdom() {
 	const eat = () => energy += 10;
 
 	return (
-		<div className='example-outer'>
-			<Instructions example={3} />
 			<div className='example-inner'>
 
 				<p>Animal Energy: {energy}</p>
@@ -23,6 +21,5 @@ export default function AnimalKingdom() {
 				<p> The animals are now full</p>
 				}
 			</div>
-		</div>
 	)
 }

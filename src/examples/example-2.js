@@ -19,12 +19,9 @@ export default function InfiniteCounter() {
 	}, [count])
 
 	return (
-		<div className='example-outer'>
-			<Instructions example={2}/>
 			<div className='example-inner'>
 				<p>Current Count: {count}</p>
 				<button className='btn'>Increase Count</button>
 			</div>
-		</div>
 	)
 }

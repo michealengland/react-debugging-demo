@@ -11,8 +11,6 @@ function RangeSlider() {
 	const [trackedSelections, setTrackedSelections] = useState([])
 
 	return (
-		<div className='example-outer'>
-			<Instructions example={7}/>
 			<div className='example-inner range'>
 				<label htmlFor={ name }>Current Range Value: {ref.current?.value}</label>
 				<input
@@ -31,7 +29,6 @@ function RangeSlider() {
 					/>
 				<p>[{trackedSelections && trackedSelections.join(', ')}]</p>
 			</div>
-		</div>
 	);
 };
 

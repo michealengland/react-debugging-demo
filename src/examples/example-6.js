@@ -5,7 +5,8 @@ import Instructions from '../components/Instructions';
  * Try:
  * Render the "type" with a value of "dog" without mutating props or throwing an error.
  */
- export default function Tiger({tigerTraits}) {
+ export default function Tiger({tigerTraits, setCompleted}) {
+
 
 
 	const newTigerTraits = tigerTraits;
@@ -20,10 +21,7 @@ import Instructions from '../components/Instructions';
 	newTigerTraits.type = 'dog';
 
 	const isMutated = tigerTraits === newTigerTraits && Object.is(tigerTraits.type, newTigerTraits.type);
-	debugger
 	return (
-		<div className="example-outer">
-			<Instructions example={6} />
 			<div className='example-inner'>
 				{isMutated && <p className='error'>ERROR: MUTATED Props! <code>tigerTraits.type</code> should equal "feline" not "{tigerTraits.type}"</p>}
 				<h2>Tiger Traits</h2>
@@ -35,7 +33,6 @@ import Instructions from '../components/Instructions';
 					<li>Weight: {weight}</li>
 				</ul>
 			</div>
-		</div>
 	)
 }
 
