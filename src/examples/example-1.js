@@ -1,4 +1,3 @@
-import Instructions from '../components/Instructions';
 /**
  * Try:
  * Fix the missing value and render a sentence.

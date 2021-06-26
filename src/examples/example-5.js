@@ -1,4 +1,3 @@
-import Instructions from "../components/Instructions";
 /**
  * Try:
  * Change the elephants name.

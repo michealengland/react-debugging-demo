@@ -1,11 +1,13 @@
-import Instructions from '../components/Instructions';
+import React, {useState} from 'react';
+
 /**
  * Try:
  * Feed the hungry animal.
  */
 export default function AnimalKingdom() {
 
-	let energy = 0;
+
+	const [energy] = useState(0)
 
 	const eat = () => energy += 10;
 
