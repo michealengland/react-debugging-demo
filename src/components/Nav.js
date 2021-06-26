@@ -8,7 +8,6 @@ function Nav({completed, setExample}) {
 	return (
 		<div className='nav-bar'>
       <ul className="row nav">
-
         <NavLink
             to="/"
             exact
@@ -17,7 +16,6 @@ function Nav({completed, setExample}) {
           >
             Home
         </NavLink>
-
         <NavLink
           to="/example1"
           className={`nav-link ${completed.one}`}
@@ -25,7 +23,6 @@ function Nav({completed, setExample}) {
         >
           Paragraph
         </NavLink>
-
         <NavLink
           to="/example2"
           className={`nav-link ${completed.two}`}
@@ -33,7 +30,6 @@ function Nav({completed, setExample}) {
         >
           Infinite Counter
         </NavLink>
-
         <NavLink
           to="/example3"
           className={`nav-link ${completed.three}`}
@@ -41,7 +37,6 @@ function Nav({completed, setExample}) {
         >
           Feed the Animals
         </NavLink>
-
         <NavLink
           to="/example4"
           className={`nav-link ${completed.four}`}
@@ -49,7 +44,6 @@ function Nav({completed, setExample}) {
         >
           Count the Giraffes
         </NavLink>
-
         <NavLink
           to="/example5"
           className={`nav-link ${completed.five}`}
@@ -57,7 +51,6 @@ function Nav({completed, setExample}) {
         >
           Rename the Elephant
         </NavLink>
-
         <NavLink
           to="/example6"
           className={`nav-link ${completed.six}`}
@@ -65,7 +58,6 @@ function Nav({completed, setExample}) {
         >
           Fix the Tiger
         </NavLink>
-
         <NavLink
           to="/example7"
           className={`nav-link ${completed.seven}`}
@@ -73,7 +65,6 @@ function Nav({completed, setExample}) {
         >
           Range Slider
         </NavLink>
-
       </ul>
 		</div>
 	);

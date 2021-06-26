@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Nav from './components/Nav';
 import Instructions from './components/Instructions';
 import Dashboard from './components/Dashboard';
+import Footer from './components/Footer';
 
 function App() {
   const [example, setExample] = useState()
@@ -17,6 +18,7 @@ function App() {
           <Instructions example={example}/>
           <Dashboard setCompleted={setCompleted}/>
         </div>
+         <Footer completed={completed}/>
       </div>
     </Router>
   );

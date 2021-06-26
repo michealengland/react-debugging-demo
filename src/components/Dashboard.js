@@ -23,6 +23,7 @@ function Dashboard({setCompleted}) {
     {tigerTraits}
   );
 	const [giraffeCount, setGiraffeCount] = useState(null);
+
   useEffect(() => {
     const fetchGiraffeCount = () => new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -51,7 +52,7 @@ function Dashboard({setCompleted}) {
             <Route path="/example5" component={Elephant}></Route>
             <Route path="/example6" component={() => <Tiger tigerTraits={tigerTraits} setCompleted={setCompleted}/>}></Route>
             <Route path="/example7" component={RangeSlider}></Route>
-            <Route render={() => <h1>404</h1>}></Route>
+            <Route render={() => <h1>404 oh f</h1>}></Route>
         </Switch>
   );
 }

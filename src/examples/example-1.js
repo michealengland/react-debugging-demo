@@ -6,6 +6,6 @@ import Instructions from '../components/Instructions';
 export default function Paragraph({textObj}) {
     const {word1, word2, word3} = textObj
     return (
-            <h3 className='example-inner'>{`${word1} ${word2} ${word3.value}`}</h3>
+        <h3 className='example-inner'>{`${word1} ${word2} ${word3.value}`}</h3>
     );
 }
