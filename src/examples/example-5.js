@@ -1,3 +1,4 @@
+import Instructions from "../components/Instructions";
 /**
  * Try:
  * Change the elephants name.
@@ -11,11 +12,13 @@ export default function Elephant() {
 	}
 
 	return (
-		<div>
-			<h2>Change the elephants name</h2>
-			<label htmlFor="name">Elephant Name:</label>
-			<input name="name" placeholder={elephantName} onChange={onChange} id="elephant-name" type="text" />
-			<p>Elephant Name: {elephantName}</p>
+		<div className='example-outer'>
+			<Instructions example={5}/>
+			<div className='example-inner'>
+				<h2>Change the elephant's name</h2>
+				<input name="name" placeholder={"type here"} onChange={onChange} id="elephant-name" type="text" />
+				<p>Current Name: {elephantName}</p>
+			</div>
 		</div>
 	)
 }

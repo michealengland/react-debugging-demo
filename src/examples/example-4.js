@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import Instructions from '../components/Instructions';
 
 /**
  * Try:
@@ -10,11 +11,19 @@ import PropTypes from 'prop-types';
 export default function Giraffes({numberOfGiraffes}) {
 	console.log('Giraffe Count:', numberOfGiraffes);
 
-	if ('number' !== typeof numberOfGiraffes) {
-		return <p>Loading Giraffes...</p>
-	}
-
-	return <p>There are {numberOfGiraffes} Giraffes in the Animal Kingdom.</p>
+	return(
+		<div className='example-outer'>
+			<Instructions example={4}/>
+			<div className='example-inner'>
+				{'number' !== typeof numberOfGiraffes
+				?
+				<p>Counting Giraffes...</p>
+				:
+				<p >There are {numberOfGiraffes} Giraffes in the Animal Kingdom.</p>
+				}
+			</div>
+		</div>
+	)
 }
 
 Giraffes.propTypes = {
