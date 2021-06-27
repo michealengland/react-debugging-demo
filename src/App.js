@@ -1,7 +1,7 @@
 import './App.scss';
 import React, { useState } from 'react';
 import { BrowserRouter as Router } from "react-router-dom";
-import Nav from './components/Nav';
+import Nav from './components/Navbar/Nav';
 import Instructions from './components/Instructions';
 import Dashboard from './components/Dashboard';
 import Footer from './components/Footer';

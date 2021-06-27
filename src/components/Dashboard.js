@@ -45,7 +45,7 @@ function Dashboard({setCompleted}) {
   return (
         <Switch>
             <Route exact path='/' component={HomePage}></Route>
-            <Route path="/example1" component={() => <Paragraph textObj={ { word1: 'Welcome', word2: 'to',}}/>}></Route>
+            <Route path="/example1" component={() => <Paragraph textObj={ { word1: 'Welcome', word2: 'to',word3: {value:'React'}}}/>}></Route>
             <Route path="/example2" component={InfiniteCounter}></Route>
             <Route path="/example3" component={AnimalKingdom}></Route>
             <Route path="/example4" component={Giraffes} ></Route>

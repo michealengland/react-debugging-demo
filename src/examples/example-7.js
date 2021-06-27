@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react';
-import Instructions from '../components/Instructions';
 
 /**
  * Try:
