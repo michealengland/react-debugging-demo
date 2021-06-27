@@ -4,17 +4,18 @@ import HamburgerSvg from './hamburgerSvg';
 
 const Hamburger = ({visible, completed, setExample, render, setRender}) => {
 
-  const [color, setColor] = useState('#fff')
+  const [color, setColor] = useState(false)
+  let iconColor = color ? '#fff' : '#55bcc9'
 
   const handleClick = (() => {
-    setColor(color === '#fff' ? '#55bcc9' : '#fff');
+    setColor(!color);
     setRender(!render);
   })
 
   return (
     <div>
     <div className={`hamburger ${visible}`} onClick={handleClick}>
-      <HamburgerSvg color={color} />
+      <HamburgerSvg color={iconColor} />
     </div>
         {render ?
          <NavLinks
