@@ -1,8 +1,12 @@
-const Footer = ({ completed }) => {
+import Modal from './Modal';
+
+const Footer = ({ completed, openModal, closeModal, modal, defaultState, setCompleted}) => {
 
   const count = Object.values(completed).filter(complete => complete === true).length;
   const percent = count/7*100;
-
+  if(percent === 100){
+    openModal()
+  }
   const containerStyles = {
     height: 20,
     backgroundColor: "#fff",
@@ -31,6 +35,7 @@ const Footer = ({ completed }) => {
       <div style={fillerStyles}>
         <span style={labelStyles}>{`${Math.floor(percent)}%`}</span>
       </div>
+      <Modal closeModal={closeModal} modal={modal} setCompleted={setCompleted} defaultState={defaultState}/>
     </div>
   );
 };

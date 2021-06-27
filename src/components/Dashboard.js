@@ -50,7 +50,7 @@ function Dashboard({setCompleted}) {
             <Route path="/example3" component={AnimalKingdom}></Route>
             <Route path="/example4" component={Giraffes} ></Route>
             <Route path="/example5" component={Elephant}></Route>
-            <Route path="/example6" component={() => <Tiger tigerTraits={tigerTraits} setCompleted={setCompleted}/>}></Route>
+            <Route path="/example6" component={() => <Tiger tigerTraits={tigerTraits} />}></Route>
             <Route path="/example7" component={RangeSlider}></Route>
             <Route render={() => <h1>404 oh f</h1>}></Route>
         </Switch>

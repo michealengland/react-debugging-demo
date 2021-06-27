@@ -4,11 +4,9 @@ import DesktopNav from './DesktopNav';
 
 
 function NavSwitch({completed, setExample}) {
-  console.log(completed)
   const [visible, setVisible] = useState(false)
   const [widthFlag, setWidthFlag] = useState(0)
   const [render, setRender] = useState(false);
-  console.log(visible)
 
   useEffect(() => {
     setWidthFlag(window.outerWidth)

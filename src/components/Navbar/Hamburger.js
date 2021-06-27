@@ -4,7 +4,7 @@ import HamburgerSvg from './hamburgerSvg';
 
 const Hamburger = ({visible, completed, setExample, render, setRender}) => {
 
-  const [color, setColor] = useState(false)
+  const [color, setColor] = useState(true)
   let iconColor = color ? '#fff' : '#55bcc9'
 
   const handleClick = (() => {
@@ -24,6 +24,7 @@ const Hamburger = ({visible, completed, setExample, render, setRender}) => {
           setExample={setExample}
           outerClassName={'hamburger-open'}
           innerClassName={'hamburger-link'}
+          handleClick={handleClick}
         />
         :
         null
