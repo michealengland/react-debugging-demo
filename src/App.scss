@@ -48,7 +48,7 @@ body {
 }
 .nav-link {
   text-decoration: none;
-  color: $fontColor;
+  color: $accentColor;
   transition: 2s ease-out;
   &.home {
     margin: 0 10px 0 0;
@@ -57,11 +57,12 @@ body {
       background: none;
     }
   }
-  &.true {
-    color: $accentColor;
+  &.complete {
+    color: $fontColor;
   }
   &:hover {
     background: $secondaryColor;
+    color: #fff;
   }
 }
 
@@ -97,11 +98,15 @@ body {
   display: flex;
   justify-content: center;
   text-decoration: none;
-  color: $fontColor;
+  color: $accentColor;
   transition: 2s ease-out;
   padding: 10px;
   &:hover {
     background: $secondaryColor;
+    color: #fff;
+  }
+  &.complete {
+    color: $fontColor;
   }
 }
 
