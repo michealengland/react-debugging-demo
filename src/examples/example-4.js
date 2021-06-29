@@ -1,4 +1,5 @@
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 /**
  * Try:
@@ -6,22 +7,19 @@ import PropTypes from 'prop-types';
  *
  * Hint: There are multiple solutions to fix this problem.
  */
-
 export default function Giraffes({numberOfGiraffes}) {
-	console.log('Giraffe Count:', numberOfGiraffes);
+  console.log('Giraffe Count:', numberOfGiraffes)
 
-	return(
-			<div className='example-inner'>
-				{'number' !== typeof numberOfGiraffes
-				?
-				<p>Counting Giraffes...</p>
-				:
-				<p >There are {numberOfGiraffes} Giraffes in the Animal Kingdom.</p>
-				}
-			</div>
-	)
+  return(
+      <div className='example-inner'>
+        {'number' !== typeof numberOfGiraffes ?
+          <p>Counting Giraffes...</p> :
+          <p>There are {numberOfGiraffes} Giraffes in the Animal Kingdom.</p>
+        }
+      </div>
+  )
 }
 
 Giraffes.propTypes = {
-	numberOfGiraffes: PropTypes.number,
+  numberOfGiraffes: PropTypes.number,
 }
