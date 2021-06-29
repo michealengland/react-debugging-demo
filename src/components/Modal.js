@@ -3,7 +3,6 @@ import React from 'react'
 
 export default function Modal({closeModal, modal, defaultState, setCompleted}) {
   let showHideClassName = modal ? 'modal' : 'modal hidden'
-  debugger
   const reset = () => {
     setCompleted(defaultState)
     closeModal()
