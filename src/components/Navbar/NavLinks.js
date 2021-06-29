@@ -26,6 +26,7 @@ export default function NavLinks({
         }`}
         onClick={() => setExample('one')}
       >
+        {completed.one ? <i className="fas fa-check"></i> : null}
         Paragraph
       </NavLink>
       <NavLink
@@ -35,6 +36,7 @@ export default function NavLinks({
         }`}
         onClick={() => setExample('two')}
       >
+        {completed.two ? <i className="fas fa-check"></i> : null}
         Infinite Counter
       </NavLink>
       <NavLink
@@ -44,6 +46,7 @@ export default function NavLinks({
         }`}
         onClick={() => setExample('three')}
       >
+        {completed.three ? <i className="fas fa-check"></i> : null}
         Feed the Animals
       </NavLink>
       <NavLink
@@ -53,6 +56,7 @@ export default function NavLinks({
         }`}
         onClick={() => setExample('four')}
       >
+        {completed.four ? <i className="fas fa-check"></i> : null}
         Count the Giraffes
       </NavLink>
       <NavLink
@@ -62,6 +66,7 @@ export default function NavLinks({
         }`}
         onClick={() => setExample('five')}
       >
+        {completed.five ? <i className="fas fa-check"></i> : null}
         Rename the Elephant
       </NavLink>
       <NavLink
@@ -71,6 +76,7 @@ export default function NavLinks({
         }`}
         onClick={() => setExample('six')}
       >
+        {completed.six ? <i className="fas fa-check"></i> : null}
         Fix the Tiger
       </NavLink>
       <NavLink
@@ -80,6 +86,7 @@ export default function NavLinks({
         }`}
         onClick={() => setExample('seven')}
       >
+        {completed.seven ? <i className="fas fa-check"></i> : null}
         Range Slider
       </NavLink>
     </nav>
