@@ -20,6 +20,7 @@ function App() {
   const [completed, setCompleted] = useState(defaultState)
   const [modal, setModal] = useState(false)
 
+  console.log('example', example)
   useEffect(() => {
     const prevCompleted = localStorage.getItem('completed')
     const prevExample = localStorage.getItem('example')
