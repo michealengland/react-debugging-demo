@@ -8,13 +8,12 @@ export default function Instruction({
   hint,
   file,
 }) {
-  console.log(example)
   return (
     <div className="body">
       {file ? <p className="file">File: example{file}</p> : null}
       <p>{description}</p>
       {hint && <p className="hint">{hint}</p>}
-      {example !== null ? (
+      {example === null || example === 'null' ? null : (
         <button
           className="btn complete"
           onClick={() =>
@@ -23,8 +22,6 @@ export default function Instruction({
         >
           Finished?
         </button>
-      ) : (
-        ''
       )}
     </div>
   )
