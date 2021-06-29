@@ -1,7 +1,6 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
 import React from 'react'
 import {NavLink} from 'react-router-dom'
+import { PropTypes } from 'prop-types';
 
 export default function NavLinks({
   completed,
@@ -9,7 +8,6 @@ export default function NavLinks({
   innerClassName,
   outerClassName,
   setExample,
-  visible,
 }) {
   return (
     <ul className={`${outerClassName} nav`} onClick={handleClick}>
@@ -72,4 +70,13 @@ export default function NavLinks({
       </NavLink>
     </ul>
   )
+}
+
+NavLinks.propTypes = {
+  completed: PropTypes.object,
+  handleClick: PropTypes.func,
+  innerClassName: PropTypes.string,
+  outerClassName: PropTypes.bool,
+  setExample: PropTypes.func,
+
 }
