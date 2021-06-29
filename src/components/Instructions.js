@@ -1,6 +1,5 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/no-unescaped-entities */
-import React from 'react'
+import React from 'react';
+import { PropTypes } from 'prop-types';
 
 export default function Instructions({example, setCompleted}) {
   let exampleInstructions
@@ -148,4 +147,10 @@ export default function Instructions({example, setCompleted}) {
   }
 
   return <div className="instructions">{exampleInstructions}</div>
+}
+
+
+Instructions.propTypes = {
+  example: PropTypes.string,
+  setCompleted: PropTypes.func
 }
