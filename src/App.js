@@ -16,7 +16,7 @@ function App() {
     six: false,
     seven: false,
   }
-  const [example, setExample] = useState()
+  const [example, setExample] = useState(null)
   const [completed, setCompleted] = useState(defaultState)
   const [modal, setModal] = useState(false)
 

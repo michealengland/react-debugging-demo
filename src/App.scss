@@ -94,7 +94,6 @@ body {
 //instructions component
 .instructions {
   height: 20vh;
-  overflow-y: scroll;
   width: 15vw;
   border: 1px solid #99d5dd;
   background-color: #97caef;
@@ -210,4 +209,15 @@ body {
 
 .display-none {
   display: none;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-around;
+  margin: 10%;
+}
+
+.github-icon {
+  text-decoration: none;
+  color: white;
 }
