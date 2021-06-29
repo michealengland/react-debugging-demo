@@ -7,7 +7,6 @@ export default function Modal({closeModal, modal, defaultState, setCompleted}) {
     setCompleted(defaultState)
     closeModal()
   }
-  debugger
 
   return (
     <div className={showHideClassName}>
