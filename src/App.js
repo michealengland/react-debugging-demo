@@ -51,7 +51,11 @@ function App() {
       <div className="App">
         <Nav completed={completed} setExample={setExample} />
         <div className="example-outr">
-          <Instructions example={example} setCompleted={setCompleted} />
+          <Instructions
+            example={example}
+            setCompleted={setCompleted}
+            completed={completed}
+          />
           <Dashboard setCompleted={setCompleted} />
         </div>
         <Footer

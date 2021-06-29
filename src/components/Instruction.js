@@ -7,7 +7,9 @@ export default function Instruction({
   example,
   hint,
   file,
+  completed,
 }) {
+  debugger
   return (
     <div className="body">
       {file ? <p className="file">File: example{file}</p> : null}
@@ -16,10 +18,13 @@ export default function Instruction({
       <button
         className="btn complete"
         onClick={() =>
-          setCompleted(prevState => ({...prevState, [example]: true}))
+          setCompleted(prevState => ({
+            ...prevState,
+            [example]: !completed[example],
+          }))
         }
       >
-        Finished?
+        {completed[example] ? 'Mark Incomplete' : 'Finished'}
       </button>
     </div>
   )
@@ -31,4 +36,5 @@ Instruction.propTypes = {
   example: PropTypes.string,
   hint: PropTypes.string,
   file: PropTypes.number,
+  completed: PropTypes.object,
 }
