@@ -1,10 +1,15 @@
 //General Appearance
+@font-face {
+  font-family: 'Mulish';
+  src: local('Mulish'),
+    url(./fonts/Mulish/Mulish-VariableFont_wght.ttf) format('truetype');
+}
 body {
   margin: 0px;
 }
 
 .App {
-  font-family: Droid;
+  font-family: Mulish, serif;
 }
 
 //Nav Bar
