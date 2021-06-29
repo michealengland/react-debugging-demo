@@ -1,156 +1,66 @@
-import React from 'react';
-import { PropTypes } from 'prop-types';
+import React from 'react'
+import {PropTypes} from 'prop-types'
+import Instruction from './Instruction'
 
 export default function Instructions({example, setCompleted}) {
   let exampleInstructions
+  let hint
+  let file
   switch (example) {
     case 'one':
-      exampleInstructions = (
-        <div className="body">
-          <p className="file">File: example1</p>
-          <p>
-            Fix the missing value and render the sentence "Welcome to React"
-          </p>
-          <button
-            className="btn complete"
-            onClick={() =>
-              setCompleted(prevState => ({...prevState, [example]: true}))
-            }
-          >
-            Finished?
-          </button>
-        </div>
-      )
+      exampleInstructions =
+        'Fix the missing value and render the sentence "Welcome to React"'
+      file = 1
       break
     case 'two':
-      exampleInstructions = (
-        <div className="body">
-          <p className="file">File: example2</p>
-          <p>
-            Fix the state so that the count only increases on a controlled
-            button click.
-          </p>
-          <button
-            className="btn complete"
-            onClick={() =>
-              setCompleted(prevState => ({...prevState, [example]: true}))
-            }
-          >
-            Finished?
-          </button>
-        </div>
-      )
+      exampleInstructions =
+        'Fix the state so that the count only increases on a controlled button click.'
+      file = 2
       break
     case 'three':
-      exampleInstructions = (
-        <div className="body">
-          <p className="file"> File: example3</p>
-          <p>Feed the hungry animals.</p>
-          <button
-            className="btn complete"
-            onClick={() =>
-              setCompleted(prevState => ({...prevState, [example]: true}))
-            }
-          >
-            Finished?
-          </button>
-        </div>
-      )
+      exampleInstructions = 'Feed the hungry animals.'
+      file = 3
       break
     case 'four':
-      exampleInstructions = (
-        <div className="body">
-          <p className="file">File: example4</p>
-          <p>Help count all the giraffes.</p>
-          <p className="hint">
-            Hint: There are multiple solutions to fix this problem.
-          </p>
-          <button
-            className="btn complete"
-            onClick={() =>
-              setCompleted(prevState => ({...prevState, [example]: true}))
-            }
-          >
-            Finished?
-          </button>
-        </div>
-      )
+      exampleInstructions = 'Help count all the giraffes.'
+      hint = 'There are multiple solutions to fix this problem.'
+      file = 4
       break
     case 'five':
-      exampleInstructions = (
-        <div className="body">
-          <p className="file">File: example5</p>
-          <p>Change the elephants name.</p>
-          <p className="hint">
-            Hint: the 'Current Name' should update in real time
-          </p>
-          <button
-            className="btn complete"
-            onClick={() =>
-              setCompleted(prevState => ({...prevState, [example]: true}))
-            }
-          >
-            Finished?
-          </button>
-        </div>
-      )
+      exampleInstructions = 'Change the elephants name.'
+      hint = "the 'Current Name' should update in real time"
+      file = 5
       break
     case 'six':
-      exampleInstructions = (
-        <div className="body">
-          <p className="file">File: example6</p>
-          <p>
-            Render the "type" with a value of "dog" without mutating props or
-            throwing an error.
-          </p>
-          <button
-            className="btn complete"
-            onClick={() =>
-              setCompleted(prevState => ({...prevState, [example]: true}))
-            }
-          >
-            Finished?
-          </button>
-        </div>
-      )
+      exampleInstructions =
+        'Render the "type" with a value of "dog" without mutating props or throwing an error.'
+      file = 6
       break
     case 'seven':
-      exampleInstructions = (
-        <div className="body">
-          <p className="file">File: example7</p>
-          <p>Reduce the amount of rendering to only what's necessary.</p>
-          <button
-            className="btn complete"
-            onClick={() =>
-              setCompleted(prevState => ({...prevState, [example]: true}))
-            }
-          >
-            Finished?
-          </button>
-        </div>
-      )
+      exampleInstructions =
+        "Reduce the amount of rendering to only what's necessary."
+      file = 7
       break
     default:
-      exampleInstructions = (
-        <div className="body">
-          <p className="body">Click a problem above to get started</p>
-          <p className="hint">
-            hint: start with Paragraph. <br></br>It's a debugging course, so
-            yes, it is meant to be broken. <br></br>Fix it.
-          </p>{' '}
-          <p className="hint">
-            Don't mark it complete unless you've actually finished it. <br></br>
-            <br></br>You'd only be hurting yourself.
-          </p>
-        </div>
-      )
+      exampleInstructions = 'Click a problem above to get started'
+      hint = 'hint: start with Paragraph.'
   }
 
-  return <div className="instructions">{exampleInstructions}</div>
+  return (
+    <div className="instructions">
+      <Instruction
+        file={file}
+        description={exampleInstructions}
+        setCompleted={setCompleted}
+        example={example}
+        hint={hint}
+      />
+    </div>
+  )
 }
-
 
 Instructions.propTypes = {
   example: PropTypes.string,
-  setCompleted: PropTypes.func
+  setCompleted: PropTypes.func,
+  file: PropTypes.number,
 }
