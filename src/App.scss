@@ -1,9 +1,17 @@
-//General Appearance
 @font-face {
   font-family: 'Mulish';
   src: local('Mulish'),
     url(./fonts/Mulish/Mulish-VariableFont_wght.ttf) format('truetype');
 }
+$baseColor: #17252a;
+$secondaryColor: #2b7b78;
+$fontColor: #3aafbb;
+$accentColor: #abbab9;
+// $baseColor: #0b0c10;
+// $secondaryColor: #c5c6c7;
+// $accentColor: #66fcf1;
+// $fontColor: #45a29e;
+//General Appearance
 body {
   margin: 0px;
 }
@@ -22,7 +30,7 @@ body {
 .nav-bar {
   top: 0;
   border: none;
-  background-color: #97caef;
+  background-color: $baseColor;
   height: auto;
   padding: 15px;
 }
@@ -40,7 +48,7 @@ body {
 }
 .nav-link {
   text-decoration: none;
-  color: #daf9fc;
+  color: $fontColor;
   transition: 2s ease-out;
   &.home {
     margin: 0 10px 0 0;
@@ -50,17 +58,17 @@ body {
     }
   }
   &.true {
-    color: #25bdd1;
+    color: $accentColor;
   }
   &:hover {
-    background: #55bcc9;
+    background: $secondaryColor;
   }
 }
 
 //Hamburger Menu
 
 .hamburger-link.true {
-  color: #25bdd1;
+  color: $accentColor;
 }
 
 .hamburger.hidden {
@@ -80,7 +88,7 @@ body {
   position: absolute;
   right: 0;
   border-radius: 2%;
-  background-color: #97caef;
+  background-color: $baseColor;
   margin: 0;
   padding: 2%;
 }
@@ -89,11 +97,11 @@ body {
   display: flex;
   justify-content: center;
   text-decoration: none;
-  color: #daf9fc;
+  color: $fontColor;
   transition: 2s ease-out;
   padding: 10px;
   &:hover {
-    background: #55bcc9;
+    background: $secondaryColor;
   }
 }
 
@@ -102,10 +110,9 @@ body {
   height: 20vh;
   overflow-y: scroll;
   width: 15vw;
-  border: 1px solid #99d5dd;
-  background-color: #97caef;
+  background-color: $baseColor;
   margin: 2%;
-  color: #daf9fc;
+  color: $fontColor;
   -ms-overflow-style: none;
   scrollbar-width: none;
   &::-webkit-scrollbar {
@@ -153,7 +160,7 @@ body {
 
 .gh-link {
   text-decoration: none;
-  color: #55bcc9;
+  color: $secondaryColor;
 }
 
 .file {
@@ -182,7 +189,7 @@ body {
     border: none;
   }
   &:hover {
-    background-color: #55bcc9;
+    background-color: $secondaryColor;
   }
 }
 
