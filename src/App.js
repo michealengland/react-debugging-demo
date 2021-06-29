@@ -1,14 +1,14 @@
-import './App.css';
-import { useState, useEffect } from 'react';
+/* eslint-disable */
+import './App.css'
+import {useState, useEffect} from 'react'
 import Paragraph from './examples/example-1'
 import InfiniteCounter from './examples/example-2'
-import AnimalKingdom from './examples/example-3';
-import Giraffes from './examples/example-4';
-import Elephant from './examples/example-5';
-import Tiger from './examples/example-6';
+import AnimalKingdom from './examples/example-3'
+import Giraffes from './examples/example-4'
+import Elephant from './examples/example-5'
+import Tiger from './examples/example-6'
 
 function App() {
-
   const tigerTraits = {
     age: 6,
     color: 'orange',
@@ -17,10 +17,8 @@ function App() {
     weight: 'heavy',
   }
 
-  console.log(
-    {tigerTraits}
-  );
-	// const [giraffeCount, setGiraffeCount] = useState(null);
+  console.log({tigerTraits})
+  // const [giraffeCount, setGiraffeCount] = useState(null);
 
   // useEffect(() => {
   //   const fetchGiraffeCount = () => new Promise((resolve, reject) => {
@@ -54,7 +52,7 @@ function App() {
       {/* <Elephant /> */}
       <Tiger tigerTraits={tigerTraits} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
