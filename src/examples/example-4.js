@@ -10,13 +10,14 @@ import PropTypes from 'prop-types'
 export default function Giraffes({numberOfGiraffes}) {
   console.log('Giraffe Count:', numberOfGiraffes)
 
-  return(
-      <div className='example-inner'>
-        {'number' !== typeof numberOfGiraffes ?
-          <p>Counting Giraffes...</p> :
-          <p>There are {numberOfGiraffes} Giraffes in the Animal Kingdom.</p>
-        }
-      </div>
+  return (
+    <div className="example-inner">
+      {'number' !== typeof numberOfGiraffes ? (
+        <p>Counting Giraffes...</p>
+      ) : (
+        <p>There are {numberOfGiraffes} Giraffes in the Animal Kingdom.</p>
+      )}
+    </div>
   )
 }
 

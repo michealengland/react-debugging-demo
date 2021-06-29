@@ -1,24 +1,25 @@
-import { useState } from "react";
-import NavLinks from "./NavLinks";
-import HamburgerSvg from './hamburgerSvg';
+/* eslint-disable react/prop-types */
+import React from 'react'
+import {useState} from 'react'
+import NavLinks from './NavLinks'
+import HamburgerSvg from './hamburgerSvg'
 
-const Hamburger = ({visible, completed, setExample, render, setRender}) => {
-
+export default function Hamburger({completed, render, setExample, setRender, visible}) {
   const [color, setColor] = useState(true)
   let iconColor = color ? '#fff' : '#55bcc9'
 
-  const handleClick = (() => {
-    setColor(!color);
-    setRender(!render);
-  })
+  const handleClick = () => {
+    setColor(!color)
+    setRender(!render)
+  }
 
   return (
     <div>
-    <div className={`hamburger ${visible}`} onClick={handleClick}>
-      <HamburgerSvg color={iconColor} />
-    </div>
-        {render ?
-         <NavLinks
+      <div className={`hamburger ${visible}`} onClick={handleClick}>
+        <HamburgerSvg color={iconColor} />
+      </div>
+      {render ? (
+        <NavLinks
           completed={completed}
           visible={visible}
           setExample={setExample}
@@ -26,12 +27,7 @@ const Hamburger = ({visible, completed, setExample, render, setRender}) => {
           innerClassName={'hamburger-link'}
           handleClick={handleClick}
         />
-        :
-        null
-        }
-
+      ) : null}
     </div>
   )
 }
-
-export default Hamburger

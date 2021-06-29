@@ -1,10 +1,10 @@
-import "./App.scss";
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-import Nav from "./components/Navbar/Nav";
-import Instructions from "./components/Instructions";
-import Dashboard from "./components/Dashboard";
-import Footer from "./components/Footer";
+import './App.scss'
+import React, {useState, useEffect} from 'react'
+import {BrowserRouter as Router} from 'react-router-dom'
+import Nav from './components/Navbar/Nav'
+import Instructions from './components/Instructions'
+import Dashboard from './components/Dashboard'
+import Footer from './components/Footer'
 
 function App() {
   const defaultState = {
@@ -15,36 +15,36 @@ function App() {
     five: false,
     six: false,
     seven: false,
-  };
-  const [example, setExample] = useState();
-  const [completed, setCompleted] = useState(defaultState);
-  const [modal, setModal] = useState(false);
+  }
+  const [example, setExample] = useState()
+  const [completed, setCompleted] = useState(defaultState)
+  const [modal, setModal] = useState(false)
 
   useEffect(() => {
-    const prevCompleted = localStorage.getItem("completed");
-    const prevExample = localStorage.getItem("example");
+    const prevCompleted = localStorage.getItem('completed')
+    const prevExample = localStorage.getItem('example')
     if (prevCompleted) {
-      setCompleted(JSON.parse(prevCompleted));
-      setExample(prevExample);
+      setCompleted(JSON.parse(prevCompleted))
+      setExample(prevExample)
     } else {
-      setCompleted(defaultState);
+      setCompleted(defaultState)
     }
-  }, []);
+  }, [])
 
   useEffect(() => {
-    localStorage.setItem("completed", JSON.stringify(completed));
-  }, [completed]);
+    localStorage.setItem('completed', JSON.stringify(completed))
+  }, [completed])
   useEffect(() => {
-    localStorage.setItem("example", example);
-  }, [example]);
+    localStorage.setItem('example', example)
+  }, [example])
 
   const openModal = () => {
-    setModal(true);
-  };
+    setModal(true)
+  }
 
   const closeModal = () => {
-    setModal(false);
-  };
+    setModal(false)
+  }
 
   return (
     <Router>
@@ -64,7 +64,7 @@ function App() {
         />
       </div>
     </Router>
-  );
+  )
 }
 
 export default App

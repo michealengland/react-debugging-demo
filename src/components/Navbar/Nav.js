@@ -1,12 +1,12 @@
-import React, {useEffect, useState} from 'react';
-import Hamburger from './Hamburger';
-import DesktopNav from './DesktopNav';
+/* eslint-disable react/prop-types */
+import React, {useEffect, useState} from 'react'
+import Hamburger from './Hamburger'
+import DesktopNav from './DesktopNav'
 
-
-function NavSwitch({completed, setExample}) {
+export default function NavSwitch({completed, setExample}) {
   const [visible, setVisible] = useState(false)
   const [widthFlag, setWidthFlag] = useState(0)
-  const [render, setRender] = useState(false);
+  const [render, setRender] = useState(false)
 
   useEffect(() => {
     setWidthFlag(window.outerWidth)
@@ -15,7 +15,7 @@ function NavSwitch({completed, setExample}) {
       if (window.outerWidth <= 900) {
         setVisible(true)
         setRender(false)
-      }else{
+      } else {
         setVisible(false)
       }
     }
@@ -23,12 +23,20 @@ function NavSwitch({completed, setExample}) {
     return () => window.removeEventListener('resize', checkWidth)
   }, [widthFlag])
 
-	return (
-		<div className='nav-bar'>
-      <DesktopNav completed={completed} setExample={setExample} visible={visible}/>
-      <Hamburger visible={visible} completed={completed} setExample={setExample} render={render} setRender={setRender}/>
-		</div>
-	);
-};
-
-export default NavSwitch
+  return (
+    <div className="nav-bar">
+      <DesktopNav
+        completed={completed}
+        setExample={setExample}
+        visible={visible}
+      />
+      <Hamburger
+        visible={visible}
+        completed={completed}
+        setExample={setExample}
+        render={render}
+        setRender={setRender}
+      />
+    </div>
+  )
+}
