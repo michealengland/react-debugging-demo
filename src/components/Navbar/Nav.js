@@ -1,7 +1,7 @@
-/* eslint-disable react/prop-types */
 import React, {useEffect, useState} from 'react'
 import Hamburger from './Hamburger'
 import DesktopNav from './DesktopNav'
+import { PropTypes } from 'prop-types';
 
 export default function NavSwitch({completed, setExample}) {
   const [visible, setVisible] = useState(false)
@@ -39,4 +39,9 @@ export default function NavSwitch({completed, setExample}) {
       />
     </div>
   )
+}
+
+NavSwitch.propTypes = {
+  completed: PropTypes.object,
+  setExample: PropTypes.func
 }
