@@ -44,7 +44,7 @@ body {
       background: none;
     }
   }
-  &.true {
+  &.complete {
     color: #25bdd1;
   }
   &:hover {
@@ -53,10 +53,6 @@ body {
 }
 
 //Hamburger Menu
-
-.hamburger-link.true {
-  color: #25bdd1;
-}
 
 .hamburger.false {
   display: none;
@@ -89,6 +85,9 @@ body {
   padding: 10px;
   &:hover {
     background: #55bcc9;
+  }
+  &.complete {
+    color: #25bdd1;
   }
 }
 
