@@ -1,21 +1,17 @@
 {
-    "parserOptions": {
-        "ecmaVersion": 2019,
-        "sourceType": "module",
-        "ecmaFeatures": {
-            "jsx": true
-        }
-    },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "prettier"
-    ],
-    "rules": {
-        "strict": ["error", "never"]
-    },
-    "env": {
-        "node": true,
-        "browser": true
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
     }
+  },
+  "extends": ["plugin:react/recommended", "prettier"],
+  "rules": {
+    "strict": ["error", "never"]
+  },
+  "env": {
+    "node": true,
+    "browser": true
+  }
 }
