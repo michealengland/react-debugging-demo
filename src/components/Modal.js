@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from 'react'
+import { PropTypes } from 'prop-types';
 
 export default function Modal({closeModal, modal, defaultState, setCompleted}) {
   const showHideClassName = modal ? 'modal display-block' : 'modal display-none'
@@ -32,4 +32,11 @@ export default function Modal({closeModal, modal, defaultState, setCompleted}) {
       </div>
     </div>
   )
+}
+
+Modal.propTypes= {
+  closeModal: PropTypes.func,
+  modal: PropTypes.bool,
+  defaultState: PropTypes.object,
+  setCompleted: PropTypes.func
 }
