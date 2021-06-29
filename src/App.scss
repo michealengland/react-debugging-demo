@@ -190,6 +190,9 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
+  &.hidden {
+    display: none;
+  }
 }
 
 .modal-main {
@@ -205,18 +208,10 @@ body {
   text-align: center;
 }
 
-.display-block {
-  display: block;
-}
-
-.display-none {
-  display: none;
-}
-
-.close{
-  background:none;
-  outline:none;
-  position:absolute;
-  top:0;
-  right:0;
+.close {
+  background: none;
+  outline: none;
+  position: absolute;
+  top: 0;
+  right: 0;
 }

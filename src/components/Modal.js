@@ -2,7 +2,7 @@
 import React from 'react'
 
 export default function Modal({closeModal, modal, defaultState, setCompleted}) {
-  const showHideClassName = modal ? 'modal display-block' : 'modal display-none'
+  let showHideClassName = modal ? 'modal' : 'modal hidden'
   const reset = () => {
     setCompleted(defaultState)
     closeModal()
@@ -11,11 +11,9 @@ export default function Modal({closeModal, modal, defaultState, setCompleted}) {
   return (
     <div className={showHideClassName}>
       <div className="modal-main">
-      <button className="close" onClick={() =>closeModal()}>X</button>
         <div>
-
-          Thanks for completing the course! Feel free to share with friends, and I
-          hope it was helpful.
+          Thanks for completing the course! Feel free to share with friends, and
+          I hope it was helpful.
           <br></br>
           Check out my other repos{' '}
           <a
@@ -23,7 +21,7 @@ export default function Modal({closeModal, modal, defaultState, setCompleted}) {
             target="_blank"
             href="https://github.com/michealengland/"
             rel="noreferrer"
-            >
+          >
             here
           </a>
           !<br></br>
