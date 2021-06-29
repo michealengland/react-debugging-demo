@@ -26,7 +26,7 @@ body {
   height: auto;
   padding: 15px;
 }
-.false.nav {
+.open-desktop.nav {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -35,7 +35,7 @@ body {
   text-transform: uppercase;
   font-size: 12px;
 }
-.true.nav {
+.hidden-desktop.nav {
   display: none;
 }
 .nav-link {
@@ -63,10 +63,10 @@ body {
   color: #25bdd1;
 }
 
-.hamburger.false {
+.hamburger.hidden {
   display: none;
 }
-.hamburger.true {
+.hamburger.visible {
   display: flex;
   justify-content: flex-end;
   cursor: pointer;

@@ -1,6 +1,6 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
-import { PropTypes } from 'prop-types';
+import {PropTypes} from 'prop-types'
 
 export default function NavLinks({
   completed,
@@ -9,6 +9,7 @@ export default function NavLinks({
   outerClassName,
   setExample,
 }) {
+  console.log(outerClassName)
   return (
     <ul className={`${outerClassName} nav`} onClick={handleClick}>
       <NavLink
@@ -78,5 +79,4 @@ NavLinks.propTypes = {
   innerClassName: PropTypes.string,
   outerClassName: PropTypes.bool,
   setExample: PropTypes.func,
-
 }
