@@ -1,8 +1,8 @@
-/* eslint-disable react/prop-types */
 import React from 'react'
 import {useState} from 'react'
 import NavLinks from './NavLinks'
 import HamburgerSvg from './hamburgerSvg'
+import { PropTypes } from 'prop-types';
 
 export default function Hamburger({completed, render, setExample, setRender, visible}) {
   const [color, setColor] = useState(true)
@@ -30,4 +30,12 @@ export default function Hamburger({completed, render, setExample, setRender, vis
       ) : null}
     </div>
   )
+}
+
+Hamburger.propTypes = {
+  completed: PropTypes.object,
+  render: PropTypes.bool,
+  setExample: PropTypes.func,
+  setRender: PropTypes.func,
+  visible: PropTypes.bool,
 }
