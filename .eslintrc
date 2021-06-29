@@ -6,7 +6,7 @@
       "jsx": true
     }
   },
-  "extends": ["plugin:react/recommended", "prettier"],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "prettier"],
   "rules": {
     "no-debugger": "off",
     "strict": ["error", "never"]
