@@ -8,12 +8,12 @@ import Footer from './components/Footer'
 
 function App() {
   const defaultState = {
-    one: false,
-    two: false,
-    three: false,
-    four: false,
-    five: false,
-    six: false,
+    one: true,
+    two: true,
+    three: true,
+    four: true,
+    five: true,
+    six: true,
     seven: false,
   }
   const [example, setExample] = useState()

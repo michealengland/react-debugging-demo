@@ -11,24 +11,27 @@ export default function Modal({closeModal, modal, defaultState, setCompleted}) {
   return (
     <div className={showHideClassName}>
       <div className="modal-main">
-        Thanks for completing the course! Feel free to share with friends, and I
-        hope it was helpful.
-        <br></br>
-        Check out my other repos{' '}
-        <a
-          className="gh-link"
-          target="_blank"
-          href="https://github.com/michealengland/"
-          rel="noreferrer"
-        >
-          here
-        </a>
-        !<br></br>
-        <button className="btn reset" onClick={() => reset()}>
-          {' '}
-          Try Again?{' '}
-        </button>
-        <p className="hint">if you cheated, try again and do it right</p>
+      <button className="close" onClick={() =>closeModal()}>X</button>
+        <div>
+
+          Thanks for completing the course! Feel free to share with friends, and I
+          hope it was helpful.
+          <br></br>
+          Check out my other repos{' '}
+          <a
+            className="gh-link"
+            target="_blank"
+            href="https://github.com/michealengland/"
+            rel="noreferrer"
+            >
+            here
+          </a>
+          !<br></br>
+          <button className="btn reset" onClick={() => reset()}>
+            {' '}
+            Try Again?{' '}
+          </button>
+        </div>
       </div>
     </div>
   )

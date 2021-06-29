@@ -212,3 +212,11 @@ body {
 .display-none {
   display: none;
 }
+
+.close{
+  background:none;
+  outline:none;
+  position:absolute;
+  top:0;
+  right:0;
+}
