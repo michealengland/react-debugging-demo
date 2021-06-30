@@ -7,7 +7,6 @@ Hello! Welcome to our React Debugging Demo. We hope this course serves useful.
 - Clone [here](https://github.com/michealengland/react-debugging-demo)
 - `yarn install`
 - `yarn start`
-- open Localhost
 
 # Getting Started
 
