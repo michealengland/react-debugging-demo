@@ -16,5 +16,5 @@ Paragraph.propTypes = {
     word1: PropTypes.string,
     word2: PropTypes.string,
     word3: PropTypes.string,
-  })
+  }),
 }

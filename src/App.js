@@ -1,57 +1,77 @@
-/* eslint-disable */
-import './App.css'
-import {useState, useEffect} from 'react'
-import Paragraph from './examples/example-1'
-import InfiniteCounter from './examples/example-2'
-import AnimalKingdom from './examples/example-3'
-import Giraffes from './examples/example-4'
-import Elephant from './examples/example-5'
-import Tiger from './examples/example-6'
+import './App.scss'
+import React, {useState, useEffect} from 'react'
+import {BrowserRouter as Router} from 'react-router-dom'
+import Nav from './components/Navbar/Nav'
+import Instructions from './components/Instructions'
+import Dashboard from './components/Dashboard'
+import Modal from './components/Modal'
 
 function App() {
-  const tigerTraits = {
-    age: 6,
-    color: 'orange',
-    stripeColor: 'black',
-    type: 'feline',
-    weight: 'heavy',
+  const defaultState = {
+    one: true,
+    two: true,
+    three: true,
+    four: true,
+    five: true,
+    six: true,
+    seven: false,
+  }
+  const [example, setExample] = useState()
+  const [completed, setCompleted] = useState(defaultState)
+  const [modal, setModal] = useState(false)
+
+  const openModal = () => {
+    setModal(true)
+  }
+  const closeModal = () => {
+    setModal(false)
   }
 
-  console.log({tigerTraits})
-  // const [giraffeCount, setGiraffeCount] = useState(null);
+  useEffect(() => {
+    const prevCompleted = localStorage.getItem('completed')
+    const prevExample = localStorage.getItem('example')
+    if (prevCompleted) {
+      setCompleted(JSON.parse(prevCompleted))
+      setExample(prevExample)
+    } else {
+      setCompleted(defaultState)
+    }
+  }, [])
 
-  // useEffect(() => {
-  //   const fetchGiraffeCount = () => new Promise((resolve, reject) => {
-  //     setTimeout(() => {
-  //       resolve('20');
-  //     }, 600);
-  //   })
-  //   .then((result) => {
-  //     setGiraffeCount(result)
-  //   })
-  //   .catch((err) => {
-  //     console.error(err);
-  //   });
+  useEffect(() => {
+    localStorage.setItem('completed', JSON.stringify(completed))
+    const count = Object.values(completed).filter(
+      complete => complete === true,
+    ).length
 
-  //   if (giraffeCount === null) {
-  //     fetchGiraffeCount();
-  //   }
-  // }, [giraffeCount]);
+    if (count === Object.values(completed).length) {
+      openModal()
+    }
+  }, [completed])
+  useEffect(() => {
+    localStorage.setItem('example', example)
+  }, [example])
 
   return (
-    <div className="App">
-      {/* <Paragraph
-        textObj={{
-            word1: 'hello',
-            word2: 'goodbye',
-        }}
-      /> */}
-      {/* <InfiniteCounter /> */}
-      {/* <AnimalKingdom /> */}
-      {/* <Giraffes numberOfGiraffes={giraffeCount} /> */}
-      {/* <Elephant /> */}
-      <Tiger tigerTraits={tigerTraits} />
-    </div>
+    <Router>
+      <div className="App">
+        <Nav completed={completed} setExample={setExample} />
+        <div className="example-outr">
+          <Instructions
+            example={example}
+            setCompleted={setCompleted}
+            completed={completed}
+          />
+          <Dashboard setCompleted={setCompleted} />
+        </div>
+        <Modal
+          closeModal={closeModal}
+          modal={modal}
+          setCompleted={setCompleted}
+          defaultState={defaultState}
+        />
+      </div>
+    </Router>
   )
 }
 

@@ -4,13 +4,13 @@ import React, {useRef, useState} from 'react'
  * Try:
  * Reduce the amount of rendering to only what's necessary.
  */
-function RangeSlider() {
+export default function RangeSlider() {
   const ref = useRef(null)
   const name = 'ranger-slider-demo'
   const [trackedSelections, setTrackedSelections] = useState([])
 
   return (
-    <div>
+    <div className="example-inner range">
       <label htmlFor={name}>Current Range Value: {ref.current?.value}</label>
       <input
         ref={ref}
@@ -30,5 +30,3 @@ function RangeSlider() {
     </div>
   )
 }
-
-export default RangeSlider

@@ -13,17 +13,16 @@ export default function Elephant() {
   }
 
   return (
-    <div>
-      <h2>Change the elephants name</h2>
-      <label htmlFor="name">Elephant Name:</label>
+    <div className="example-inner">
+      <h2>{`Change the elephant's name`}</h2>
       <input
         name="name"
-        placeholder={elephantName}
+        placeholder={'type here'}
         onChange={onChange}
         id="elephant-name"
         type="text"
       />
-      <p>Elephant Name: {elephantName}</p>
+      <p>Current Name: {elephantName}</p>
     </div>
   )
 }
