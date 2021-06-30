@@ -48,7 +48,7 @@ function Dashboard() {
         path="/example1"
         component={() => (
           <Paragraph
-            textObj={{word1: 'Welcome', word2: 'to', word3: {value: 'React'}}}
+            textObj={{word1: 'Welcome', word2: 'to', word3: {}}}
           />
         )}
       ></Route>
