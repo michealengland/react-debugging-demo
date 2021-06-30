@@ -9,7 +9,6 @@ export default function Instruction({
   file,
   completed,
 }) {
-  debugger
   return (
     <div className="body">
       {file ? <p className="file">File: example{file}</p> : null}
