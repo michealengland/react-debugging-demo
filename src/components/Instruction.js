@@ -14,17 +14,19 @@ export default function Instruction({
       {file ? <p className="file">File: <code>src/example-{file}</code></p> : null}
       <p>{description}</p>
       {hint && <p className="hint">{hint}</p>}
-      <button
-        className="btn complete"
-        onClick={() =>
-          setCompleted(prevState => ({
-            ...prevState,
-            [example]: !completed[example],
-          }))
-        }
-      >
-        {completed[example] ? 'Mark Incomplete' : 'Finished'}
-      </button>
+      {example === null || example === 'null' ? null : (
+        <button
+          className="btn complete"
+          onClick={() =>
+            setCompleted(prevState => ({
+              ...prevState,
+              [example]: !completed[example],
+            }))
+          }
+        >
+          {completed[example] ? 'Mark Incomplete' : 'Finished'}
+        </button>
+      )}
     </div>
   )
 }

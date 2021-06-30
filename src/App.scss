@@ -20,7 +20,6 @@ body {
 
 //Nav Bar
 .home-title {
-  font-size: 15px;
   &.header {
     text-align: center;
   }
@@ -110,9 +109,11 @@ body {
 
 //instructions component
 .instructions {
+  position: relative;
   height: 20vh;
-  overflow-y: scroll;
   width: 15vw;
+  min-width: 80px;
+  overflow-y: scroll;
   background-color: $baseColor;
   margin: 2%;
   color: $fontColor;
@@ -134,11 +135,10 @@ body {
   display: flex;
 }
 
-.home-text {
-  margin: 2% 5% 0 4%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.homepage-list > li {
+  padding: 10px;
+  font-size: 14px;
+  text-align: left;
 }
 .content-wrapper {
   margin: 3% 15%;
@@ -233,4 +233,9 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.github-icon {
+  text-decoration: none;
+  color: black;
 }

@@ -8,15 +8,15 @@ import Modal from './components/Modal'
 
 function App() {
   const defaultState = {
-    one: true,
-    two: true,
-    three: true,
-    four: true,
-    five: true,
-    six: true,
+    one: false,
+    two: false,
+    three: false,
+    four: false,
+    five: false,
+    six: false,
     seven: false,
   }
-  const [example, setExample] = useState()
+  const [example, setExample] = useState(null)
   const [completed, setCompleted] = useState(defaultState)
   const [modal, setModal] = useState(false)
 
