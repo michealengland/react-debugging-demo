@@ -44,6 +44,7 @@ export default function Instructions({example, setCompleted, completed}) {
     default:
       exampleInstructions = 'Click a problem above to get started'
       hint = 'hint: start with Paragraph.'
+      break
   }
 
   return (
