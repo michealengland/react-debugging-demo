@@ -2,9 +2,15 @@ import React from 'react'
 import {useState} from 'react'
 import NavLinks from './NavLinks'
 import HamburgerSvg from './hamburgerSvg'
-import { PropTypes } from 'prop-types';
+import {PropTypes} from 'prop-types'
 
-export default function Hamburger({completed, render, setExample, setRender, visible}) {
+export default function Hamburger({
+  completed,
+  render,
+  setExample,
+  setRender,
+  visible,
+}) {
   const [color, setColor] = useState(true)
   let iconColor = color ? '#fff' : '#55bcc9'
 
@@ -15,7 +21,10 @@ export default function Hamburger({completed, render, setExample, setRender, vis
 
   return (
     <div>
-      <div className={`hamburger ${visible}`} onClick={handleClick}>
+      <div
+        className={`hamburger ${visible ? 'visible' : 'hidden'}`}
+        onClick={handleClick}
+      >
         <HamburgerSvg color={iconColor} />
       </div>
       {render ? (

@@ -1,10 +1,21 @@
+@font-face {
+  font-family: 'Mulish';
+  src: local('Mulish'),
+    url(./fonts/Mulish/Mulish-VariableFont_wght.ttf) format('truetype');
+}
+$baseColor: #17252a;
+$secondaryColor: #2b7b78;
+$fontColor: #3aafbb;
+$accentColor: #abbab9;
+$white: #fff;
+
 //General Appearance
 body {
   margin: 0px;
 }
 
 .App {
-  font-family: Droid;
+  font-family: Mulish, sans-serif;
 }
 
 //Nav Bar
@@ -17,11 +28,11 @@ body {
 .nav-bar {
   top: 0;
   border: none;
-  background-color: #97caef;
+  background-color: $baseColor;
   height: auto;
   padding: 15px;
 }
-.false.nav {
+.open-desktop.nav {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -30,13 +41,13 @@ body {
   text-transform: uppercase;
   font-size: 12px;
 }
-.true.nav {
+.hidden-desktop.nav {
   display: none;
 }
 .nav-link {
   text-decoration: none;
-  color: #daf9fc;
-  transition: 2s ease-out;
+  color: $accentColor;
+  transition: 300ms ease-out;
   &.home {
     margin: 0 10px 0 0;
     font-size: 15px;
@@ -45,19 +56,24 @@ body {
     }
   }
   &.complete {
-    color: #25bdd1;
+    color: $fontColor;
   }
   &:hover {
-    background: #55bcc9;
+    background: $secondaryColor;
+    color: $white;
   }
 }
 
 //Hamburger Menu
 
-.hamburger.false {
+.hamburger-link.true {
+  color: $accentColor;
+}
+
+.hamburger.hidden {
   display: none;
 }
-.hamburger.true {
+.hamburger.visible {
   display: flex;
   justify-content: flex-end;
   cursor: pointer;
@@ -71,7 +87,7 @@ body {
   position: absolute;
   right: 0;
   border-radius: 2%;
-  background-color: #97caef;
+  background-color: $baseColor;
   margin: 0;
   padding: 2%;
 }
@@ -80,14 +96,15 @@ body {
   display: flex;
   justify-content: center;
   text-decoration: none;
-  color: #daf9fc;
-  transition: 2s ease-out;
+  color: $accentColor;
+  transition: 300ms ease-out;
   padding: 10px;
   &:hover {
-    background: #55bcc9;
+    background: $secondaryColor;
+    color: $white;
   }
   &.complete {
-    color: #25bdd1;
+    color: $fontColor;
   }
 }
 
@@ -96,10 +113,9 @@ body {
   height: 20vh;
   overflow-y: scroll;
   width: 15vw;
-  border: 1px solid #99d5dd;
-  background-color: #97caef;
+  background-color: $baseColor;
   margin: 2%;
-  color: #daf9fc;
+  color: $fontColor;
   -ms-overflow-style: none;
   scrollbar-width: none;
   &::-webkit-scrollbar {
@@ -107,7 +123,7 @@ body {
   }
 }
 
-.body {
+.instruction-body {
   padding: 2%;
   text-align: center;
 }
@@ -147,7 +163,7 @@ body {
 
 .gh-link {
   text-decoration: none;
-  color: #55bcc9;
+  color: $secondaryColor;
 }
 
 .file {
@@ -157,7 +173,6 @@ body {
 
 //button rendering
 .btn {
-  // outline:none;
   border: 1px solid black;
   padding: 6%;
   border-radius: 5%;
@@ -176,12 +191,12 @@ body {
     border: none;
   }
   &:hover {
-    background-color: #55bcc9;
+    background-color: $secondaryColor;
+    color: $accentColor;
   }
 }
 
 //Modal CSS
-
 .modal {
   position: fixed;
   top: 0;
@@ -189,6 +204,9 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
+  &.hidden {
+    display: none;
+  }
 }
 
 .modal-main {
@@ -204,10 +222,10 @@ body {
   text-align: center;
 }
 
-.display-block {
-  display: block;
-}
-
-.display-none {
-  display: none;
+.close {
+  background: none;
+  outline: none;
+  position: absolute;
+  top: 0;
+  right: 0;
 }

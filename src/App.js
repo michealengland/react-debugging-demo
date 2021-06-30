@@ -4,21 +4,28 @@ import {BrowserRouter as Router} from 'react-router-dom'
 import Nav from './components/Navbar/Nav'
 import Instructions from './components/Instructions'
 import Dashboard from './components/Dashboard'
-import Footer from './components/Footer'
+import Modal from './components/Modal'
 
 function App() {
   const defaultState = {
-    one: false,
-    two: false,
-    three: false,
-    four: false,
-    five: false,
-    six: false,
+    one: true,
+    two: true,
+    three: true,
+    four: true,
+    five: true,
+    six: true,
     seven: false,
   }
   const [example, setExample] = useState()
   const [completed, setCompleted] = useState(defaultState)
   const [modal, setModal] = useState(false)
+
+  const openModal = () => {
+    setModal(true)
+  }
+  const closeModal = () => {
+    setModal(false)
+  }
 
   useEffect(() => {
     const prevCompleted = localStorage.getItem('completed')
@@ -33,18 +40,17 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem('completed', JSON.stringify(completed))
+    const count = Object.values(completed).filter(
+      complete => complete === true,
+    ).length
+
+    if (count === Object.values(completed).length) {
+      openModal()
+    }
   }, [completed])
   useEffect(() => {
     localStorage.setItem('example', example)
   }, [example])
-
-  const openModal = () => {
-    setModal(true)
-  }
-
-  const closeModal = () => {
-    setModal(false)
-  }
 
   return (
     <Router>
@@ -58,9 +64,7 @@ function App() {
           />
           <Dashboard setCompleted={setCompleted} />
         </div>
-        <Footer
-          completed={completed}
-          openModal={openModal}
+        <Modal
           closeModal={closeModal}
           modal={modal}
           setCompleted={setCompleted}

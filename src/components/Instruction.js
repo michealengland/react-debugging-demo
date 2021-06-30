@@ -10,7 +10,7 @@ export default function Instruction({
   completed,
 }) {
   return (
-    <div className="body">
+    <div className="instruction-body">
       {file ? <p className="file">File: example{file}</p> : null}
       <p>{description}</p>
       {hint && <p className="hint">{hint}</p>}
