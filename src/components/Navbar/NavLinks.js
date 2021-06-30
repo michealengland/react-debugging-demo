@@ -97,6 +97,6 @@ NavLinks.propTypes = {
   completed: PropTypes.object,
   handleClick: PropTypes.func,
   innerClassName: PropTypes.string,
-  outerClassName: PropTypes.bool,
+  outerClassName: PropTypes.string,
   setExample: PropTypes.func,
 }
