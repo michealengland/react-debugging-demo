@@ -9,7 +9,6 @@ export default function NavLinks({
   outerClassName,
   setExample,
 }) {
-  console.log(outerClassName)
   return (
     <nav className={`${outerClassName} nav`} onClick={handleClick}>
       <NavLink
