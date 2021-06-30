@@ -47,7 +47,7 @@ body {
 .nav-link {
   text-decoration: none;
   color: $accentColor;
-  transition: 2s ease-out;
+  transition: 300ms ease-out;
   &.home {
     margin: 0 10px 0 0;
     font-size: 15px;
@@ -97,7 +97,7 @@ body {
   justify-content: center;
   text-decoration: none;
   color: $accentColor;
-  transition: 2s ease-out;
+  transition: 300ms ease-out;
   padding: 10px;
   &:hover {
     background: $secondaryColor;
