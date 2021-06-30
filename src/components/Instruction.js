@@ -11,7 +11,7 @@ export default function Instruction({
 }) {
   return (
     <div className="instruction-body">
-      {file ? <p className="file">File: example{file}</p> : null}
+      {file ? <p className="file">File: <code>src/example-{file}</code></p> : null}
       <p>{description}</p>
       {hint && <p className="hint">{hint}</p>}
       <button
