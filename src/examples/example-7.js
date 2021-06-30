@@ -12,7 +12,7 @@ export default function RangeSlider() {
   const [trackedSelections, setTrackedSelections] = useState([])
 
   return (
-    <div className="example-inner range">
+    <div className="example-inner">
       <label htmlFor={name}>Current Range Value: {ref.current?.value}</label>
       <input
         ref={ref}
@@ -28,7 +28,9 @@ export default function RangeSlider() {
         }}
         type="range"
       />
-      <p>[{trackedSelections && trackedSelections.join(', ')}]</p>
+      <div className="range-printed-data">
+        [{trackedSelections && trackedSelections.join(', ')}]
+      </div>
     </div>
   )
 }

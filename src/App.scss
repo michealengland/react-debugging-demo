@@ -142,9 +142,11 @@ body {
 }
 .example-inner {
   margin: 3% 15%;
-  &.range {
-    width: 25vw;
-  }
+}
+
+.range-printed-data {
+  max-width: 600px;
+  width: 100%;
 }
 
 //oddities/specific components
