@@ -4,6 +4,8 @@ import {useEffect, useState} from 'react'
 /**
  * Try:
  * Fix the state so that the count only increases on a controlled button click.
+ *
+ * Lesson: Infinite loops.
  */
 export default function InfiniteCounter() {
   const [count, setCount] = useState(0)

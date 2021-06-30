@@ -3,6 +3,8 @@ import React from 'react'
 /**
  * Try:
  * Feed the hungry animal.
+ *
+ * Lesson: Re-rendering.
  */
 export default function AnimalKingdom() {
   let energy = 0

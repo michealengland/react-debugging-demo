@@ -3,6 +3,8 @@ import React, {useRef, useState} from 'react'
 /**
  * Try:
  * Reduce the amount of rendering to only what's necessary.
+ *
+ * Lesson: Event Handling.
  */
 export default function RangeSlider() {
   const ref = useRef(null)
