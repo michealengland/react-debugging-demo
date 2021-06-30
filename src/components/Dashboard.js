@@ -42,6 +42,7 @@ function Dashboard() {
   }, [giraffeCount])
 
   return (
+    <div className="content-wrapper">
     <Switch>
       <Route exact path="/" component={HomePage}></Route>
       <Route
@@ -63,6 +64,7 @@ function Dashboard() {
       <Route path="/example7" component={RangeSlider}></Route>
       <Route render={() => <h1>404 oh f</h1>}></Route>
     </Switch>
+    </div>
   )
 }
 

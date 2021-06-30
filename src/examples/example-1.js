@@ -10,7 +10,11 @@ import PropTypes from 'prop-types'
 export default function Paragraph({textObj}) {
   const {word1, word2, word3} = textObj
 
-  return <p>{`${word1} + ${word2} + ${word3.value}`}</p>
+  return (
+    <div>
+      <p>{`${word1} + ${word2} + ${word3.value}`}</p>
+    </div>
+  )
 }
 
 Paragraph.propTypes = {

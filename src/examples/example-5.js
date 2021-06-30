@@ -15,7 +15,7 @@ export default function Elephant() {
   }
 
   return (
-    <div className="example-inner">
+    <div>
       <h2>{`Change the elephant's name`}</h2>
       <input
         name="name"
