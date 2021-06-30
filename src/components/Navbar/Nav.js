@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import Hamburger from './Hamburger'
 import DesktopNav from './DesktopNav'
-import { PropTypes } from 'prop-types';
+import {PropTypes} from 'prop-types'
 
 export default function NavSwitch({completed, setExample}) {
   const [visible, setVisible] = useState(false)
@@ -12,7 +12,7 @@ export default function NavSwitch({completed, setExample}) {
     setWidthFlag(window.outerWidth)
     function checkWidth() {
       setWidthFlag(window.outerWidth)
-      if (window.outerWidth <= 900) {
+      if (window.innerWidth <= 900) {
         setVisible(true)
         setRender(false)
       } else {
@@ -43,5 +43,5 @@ export default function NavSwitch({completed, setExample}) {
 
 NavSwitch.propTypes = {
   completed: PropTypes.object,
-  setExample: PropTypes.func
+  setExample: PropTypes.func,
 }

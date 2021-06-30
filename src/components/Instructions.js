@@ -2,7 +2,7 @@ import React from 'react'
 import {PropTypes} from 'prop-types'
 import Instruction from './Instruction'
 
-export default function Instructions({example, setCompleted}) {
+export default function Instructions({example, setCompleted, completed}) {
   let exampleInstructions
   let hint
   let file
@@ -55,6 +55,7 @@ export default function Instructions({example, setCompleted}) {
         setCompleted={setCompleted}
         example={example}
         hint={hint}
+        completed={completed}
       />
     </div>
   )
@@ -64,4 +65,5 @@ Instructions.propTypes = {
   example: PropTypes.string,
   setCompleted: PropTypes.func,
   file: PropTypes.number,
+  completed: PropTypes.object,
 }

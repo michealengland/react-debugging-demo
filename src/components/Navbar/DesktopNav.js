@@ -1,6 +1,6 @@
 import React from 'react'
 import NavLinks from './NavLinks'
-import { PropTypes } from 'prop-types';
+import {PropTypes} from 'prop-types'
 
 export default function DesktopNav({completed, setExample, visible}) {
   return (
@@ -8,7 +8,7 @@ export default function DesktopNav({completed, setExample, visible}) {
       completed={completed}
       visible={visible}
       setExample={setExample}
-      outerClassName={visible}
+      outerClassName={visible ? 'hidden-desktop' : 'open-desktop'}
       innerClassName={'nav-link'}
     />
   )
