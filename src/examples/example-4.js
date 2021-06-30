@@ -6,6 +6,8 @@ import PropTypes from 'prop-types'
  * Fix this render to render Giraffes.
  *
  * Hint: There are multiple solutions to fix this problem.
+ *
+ * Lesson: PropTypes.
  */
 export default function Giraffes({numberOfGiraffes}) {
   console.log('Giraffe Count:', numberOfGiraffes)

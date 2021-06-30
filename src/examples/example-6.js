@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 /**
  * Try:
  * Render the "type" with a value of "dog" without mutating props or throwing an error.
+ *
+ * Lesson: Mutation.
  */
 export default function Tiger({tigerTraits}) {
   const newTigerTraits = tigerTraits

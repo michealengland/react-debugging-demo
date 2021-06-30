@@ -3,6 +3,8 @@ import React from 'react'
 /**
  * Try:
  * Change the elephants name.
+ *
+ * Lesson: Direct DOM manipulation.
  */
 export default function Elephant() {
   let elephantName = 'Ricky Bobby'
