@@ -28,7 +28,7 @@ export default function Instructions({example, setCompleted, completed}) {
       break
     case 'five':
       exampleInstructions = 'Change the elephants name.'
-      hint = "the 'Current Name' should update in real time"
+      hint = "The 'Current Name' should update in real time"
       file = 5
       break
     case 'six':
