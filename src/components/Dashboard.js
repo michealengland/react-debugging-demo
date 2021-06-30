@@ -18,7 +18,11 @@ function Dashboard() {
     weight: 'heavy',
   }
 
-  console.log({tigerTraits})
+  useEffect(() => {
+    if (window.location.pathname === '/example6') {
+      console.log({tigerTraits})
+    }
+  })
   const [giraffeCount, setGiraffeCount] = useState(null)
 
   useEffect(() => {
@@ -43,27 +47,25 @@ function Dashboard() {
 
   return (
     <div className="content-wrapper">
-    <Switch>
-      <Route exact path="/" component={HomePage}></Route>
-      <Route
-        path="/example1"
-        component={() => (
-          <Paragraph
-            textObj={{word1: 'Welcome', word2: 'to', word3: {}}}
-          />
-        )}
-      ></Route>
-      <Route path="/example2" component={InfiniteCounter}></Route>
-      <Route path="/example3" component={AnimalKingdom}></Route>
-      <Route path="/example4" component={Giraffes}></Route>
-      <Route path="/example5" component={Elephant}></Route>
-      <Route
-        path="/example6"
-        component={() => <Tiger tigerTraits={tigerTraits} />}
-      ></Route>
-      <Route path="/example7" component={RangeSlider}></Route>
-      <Route render={() => <h1>404 oh f</h1>}></Route>
-    </Switch>
+      <Switch>
+        <Route exact path="/" component={HomePage}></Route>
+        <Route
+          path="/example1"
+          component={() => (
+            <Paragraph textObj={{word1: 'Welcome', word2: 'to', word3: {}}} />
+          )}
+        ></Route>
+        <Route path="/example2" component={InfiniteCounter}></Route>
+        <Route path="/example3" component={AnimalKingdom}></Route>
+        <Route path="/example4" component={Giraffes}></Route>
+        <Route path="/example5" component={Elephant}></Route>
+        <Route
+          path="/example6"
+          component={() => <Tiger tigerTraits={tigerTraits} />}
+        ></Route>
+        <Route path="/example7" component={RangeSlider}></Route>
+        <Route render={() => <h1>404 oh f</h1>}></Route>
+      </Switch>
     </div>
   )
 }

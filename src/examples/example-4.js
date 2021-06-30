@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import PropTypes from 'prop-types'
 
 /**
@@ -10,7 +10,11 @@ import PropTypes from 'prop-types'
  * Lesson: PropTypes.
  */
 export default function Giraffes({numberOfGiraffes}) {
-  console.log('Giraffe Count:', numberOfGiraffes)
+  useEffect(() => {
+    if (window.location.pathname === '/example4') {
+      console.log('Giraffe Count:', numberOfGiraffes)
+    }
+  }, [])
 
   return (
     <div>
