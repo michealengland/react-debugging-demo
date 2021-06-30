@@ -7,6 +7,7 @@ $baseColor: #17252a;
 $secondaryColor: #2b7b78;
 $fontColor: #3aafbb;
 $accentColor: #abbab9;
+$white: #fff;
 
 //General Appearance
 body {
@@ -59,7 +60,7 @@ body {
   }
   &:hover {
     background: $secondaryColor;
-    color: #fff;
+    color: $white;
   }
 }
 
@@ -100,7 +101,7 @@ body {
   padding: 10px;
   &:hover {
     background: $secondaryColor;
-    color: #fff;
+    color: $white;
   }
   &.complete {
     color: $fontColor;
