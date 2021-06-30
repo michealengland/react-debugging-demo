@@ -2,13 +2,13 @@
 
 Hello! Welcome to our React Debugging Demo. We hope this course serves useful.
 
-# Installation
+## Installation
 
 - Clone [here](https://github.com/michealengland/react-debugging-demo)
 - `yarn install`
 - `yarn start`
 
-# Getting Started
+## Getting Started
 
 We Recommend starting with "Paragraph", and working your way across.
 
@@ -21,8 +21,18 @@ The only folders you will need to work in are:
 - the entire "examples" directory
 - src/components/Dashboard.js
 
-# About the Authors
+## External Debugging Resources
 
-### [Mike England](https://github.com/michealengland)
+- [Chrome browser extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+- [Mozilla](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)
+- Safari does not have a debugging tools extension and must use the [react-devtools package](https://www.npmjs.com/package/react-devtools)
 
-### [J.R. McCann](https://github.com/johnrobertmcc)
+## Helpful Resources
+
+- [React Profiler Introduction](https://reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html)
+- [React Profiler API](https://reactjs.org/docs/profiler.html) for a deeper dive into working with the profiler
+
+## Authors
+
+- [Mike England](https://github.com/michealengland)
+- [J.R. McCann](https://github.com/johnrobertmcc)
