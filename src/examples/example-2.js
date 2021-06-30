@@ -20,7 +20,7 @@ export default function InfiniteCounter() {
   }, [count])
 
   return (
-    <div>
+     <div>
       <p>Current Count: {count}</p>
       <button>Increase Count</button>
     </div>

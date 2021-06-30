@@ -13,7 +13,7 @@ export default function Giraffes({numberOfGiraffes}) {
   console.log('Giraffe Count:', numberOfGiraffes)
 
   return (
-    <div className="example-inner">
+    <div>
       {'number' !== typeof numberOfGiraffes ? (
         <p>Counting Giraffes...</p>
       ) : (
