@@ -169,7 +169,10 @@ body {
 }
 
 .file {
+  color: $white;
   font-family: monospace;
+  font-weight: bold;
+  text-align: left;
   text-transform: lowercase;
 }
 
